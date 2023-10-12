@@ -11,10 +11,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
     background-color: hsl(188, 63%, 7%);
     color: white;
-    padding: 20px 60px;
+    padding: 5px 60px;
 }
 
 .top-bar .left{
@@ -53,7 +52,7 @@
     justify-content: space-between;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding: 20px 60px;
+    padding: 25px 60px;
 }
 
 .container header nav ul{
