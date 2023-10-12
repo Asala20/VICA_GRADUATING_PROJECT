@@ -1,5 +1,131 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito Sans';
+}
+
+/* top bar styling */
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: hsl(188, 63%, 7%);
+    color: white;
+    padding: 20px 60px;
+}
+
+.top-bar .left{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-bar .right{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.top-bar .right .icons .fa-facebook, .top-bar .right .icons .fa-instagram, .top-bar .right .icons .fa-twitter, .top-bar .right .icons .fa-pinterest{
+    padding: 0 5px;
+}
+.top-bar .left p .fa-envelope, .top-bar .left p .fa-location-dot{
+    color: hsl(9, 100%, 62%);
+    padding: 0 5px;
+}
+
+.top-bar .right a{
+    text-decoration: none;
+    color: white;
+    background-color: hsl(9, 100%, 62%);
+    padding: 10px 20px;
+}
+
+/* nav bar styling */
+.container header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding: 20px 60px;
+}
+
+.container header nav ul{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.container header nav .icons{
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container header nav .icons .fa-magnifying-glass,.container header nav .icons .fa-user, .container header nav .icons .fa-cart-shopping{
+    padding: 15px;
+    /* background-color: #eee; */
+    box-shadow: 0 5px 20px 0 hsla(219, 56%, 21%, 0.1);
+}
+
+/* hero styling */
+.container .hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 20px 60px;
+    height: 77vh;
+}
+.container .hero .right{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+.container .hero .left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .hero .left h1{
+    font-size: 50px;
+    font-weight: 900;
+}
+.container .hero .left p{
+    color: #a8a8a8;
+    border-left: 2px solid #a8a8a8;
+    padding: 0 30px;
+    margin-bottom: 50px;
+}
+.container .hero .right img{
+    width: 80%;
+
+}
+.container .hero h1{
+    margin: 20px 0;
+}
+.container .hero span .fa-house{
+    color: hsl(9, 100%, 62%);
+}   
+
+.container .hero a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: hsl(9, 100%, 62%);
+    width: 45%;
+    text-align: center;
 }
