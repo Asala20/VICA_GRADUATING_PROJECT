@@ -6,6 +6,23 @@
     font-family: 'Nunito Sans';
 }
 
+:root{
+    --dark-jungle-green: hsl(188, 63%, 7%);
+    --prussian-blue: hsl(200, 69%, 14%);
+    --raisin-black-1: hsl(227, 29%, 13%);
+    --raisin-black-2: hsl(229, 17%, 19%);
+    --yellow-green: hsl(89, 72%, 45%);
+    --orange-soda: hsl(9, 100%, 62%);
+    --cultured-1: hsl(0, 0%, 93%);
+    --cultured-2: hsl(192, 24%, 96%);
+    --misty-rose: hsl(7, 56%, 91%);
+    --alice-blue: hsl(210, 100%, 97%);
+    --seashell: hsl(8, 100%, 97%);
+    --cadet: hsl(200, 15%, 43%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --opal: hsl(180, 20%, 62%);
+}
 /* top bar styling */
 .top-bar{
     display: flex;
@@ -127,4 +144,67 @@
     background-color: hsl(9, 100%, 62%);
     width: 45%;
     text-align: center;
+}
+
+.container .sec-4{
+    text-align: center;
+    padding: 20px 60px;
+}
+
+
+/* sec-4 styling */
+.container .sec-4 h1{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.container .sec-4 a{
+    text-decoration: none;
+    background-color: hsla(9, 100%, 62%, 0.1);
+    color: var(--orange-soda);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.container .sec-4 .card-container{
+    height: 83vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .sec-4 .card-container .card{
+    width: calc((100% / 4) - 60px);
+    box-shadow: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+    height: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.container .sec-4 .card-container .card .hydrated{
+    font-size: 40px;
+    margin-bottom: 20px;
+    background-color: var(--misty-rose);
+    padding: 20px;
+    border-radius: 50px;
+    color: var(--orange-soda);
+}
+
+.container .sec-4 .card-container .card p{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.container .sec-4 .card-container .card .si{
+    font-size: 20px;
+    box-shadow: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+    padding: 7px;
+    position: absolute;
+    bottom: -30px;
+    background-color: white;
+    color: rgb(99, 98, 98);
 }
