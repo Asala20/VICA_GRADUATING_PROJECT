@@ -146,13 +146,16 @@
     text-align: center;
 }
 
-.container .sec-4{
-    text-align: center;
-    padding: 20px 60px;
-}
 
 
 /* sec-4 styling */
+
+.container .sec-4{
+    text-align: center;
+    padding: 20px 60px;
+    background-color: #eee;
+}
+
 .container .sec-4 h1{
     font-size: 40px;
     font-weight: 900;
@@ -183,6 +186,8 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .container .sec-4 .card-container .card .hydrated{
