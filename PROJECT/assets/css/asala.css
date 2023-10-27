@@ -22,6 +22,7 @@
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --opal: hsl(180, 20%, 62%);
+    --shadow-2: 0 16px 32px hsla(188, 63%, 7%, 0.1);
 }
 /* top bar styling */
 .top-bar{
@@ -34,17 +35,20 @@
 }
 
 .top-bar .left{
-    width: 30%;
+    width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 .top-bar .right{
-    width: 20%;
+    width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+}
 
+.top-bar .left p{
+    margin-right: 20px;
 }
 
 .top-bar .right .icons .fa-facebook, .top-bar .right .icons .fa-instagram, .top-bar .right .icons .fa-twitter, .top-bar .right .icons .fa-pinterest{
@@ -60,6 +64,7 @@
     color: white;
     background-color: hsl(9, 100%, 62%);
     padding: 10px 20px;
+    margin-left: 10px;
 }
 
 /* nav bar styling */
@@ -71,11 +76,17 @@
     padding-bottom: 15px;
     padding: 25px 60px;
 }
+.container header nav .nav-items{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    font-size: 20px;
+}
 
-.container header nav ul{
+.container header nav .nav-items ul{
     display: flex;
     list-style: none;
-    width: 50%;
+    width: 100%;
     justify-content: space-around;
     font-size: 20px;
 }
@@ -88,11 +99,19 @@
 }
 
 
-.container header nav .icons .fa-magnifying-glass,.container header nav .icons .fa-user, .container header nav .icons .fa-cart-shopping{
+.container header nav .icons .fa-magnifying-glass,.container header nav .icons .fa-user, .container header nav .icons .fa-cart-shopping, .icons button{
     padding: 15px;
     /* background-color: #eee; */
     box-shadow: 0 5px 20px 0 hsla(219, 56%, 21%, 0.1);
 }
+nav .toggle{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    display: none;
+}
+
 
 /* hero styling */
 .container .hero{
@@ -126,7 +145,7 @@
     margin-bottom: 50px;
 }
 .container .hero .right img{
-    width: 80%;
+    width: 100%;
 
 }
 .container .hero h1{
@@ -152,16 +171,21 @@
 
 .container .sec-4{
     text-align: center;
-    padding: 20px 60px;
+    padding: 100px 60px;
     background-color: #eee;
 }
 
-.container .sec-4 h1{
+.container .sec-5{
+    text-align: center;
+    padding: 100px 60px;
+}
+
+.container .sec-4 h1, .container .sec-5 h1{
     font-size: 40px;
     font-weight: 900;
 }
 
-.container .sec-4 a{
+.container .sec-4 a, .container .sec-5 a{
     text-decoration: none;
     background-color: hsla(9, 100%, 62%, 0.1);
     color: var(--orange-soda);
@@ -170,7 +194,7 @@
 }
 
 .container .sec-4 .card-container{
-    height: 83vh;
+    /* height: 83vh; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -188,6 +212,8 @@
     position: relative;
     background-color: white;
     border-radius: 10px;
+    padding: 50px;
+    margin: 30px 0;
 }
 
 .container .sec-4 .card-container .card .hydrated{
@@ -213,3 +239,195 @@
     background-color: white;
     color: rgb(99, 98, 98);
 }
+
+.container .sec-5 .card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.container .sec-5 .card-container .card{
+    width: 32%;
+    text-align: left;
+    box-shadow: var(--shadow-2);
+}
+
+.container .sec-5 .card-container .card img{
+    width: 100%;
+    height: 50%;
+}
+
+.container .sec-5 .card-container .card p{
+    margin: 20px;
+}
+
+.container .sec-5 .card-container .card h2{
+    margin: 0 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 0.5px #d6d6d6;
+}
+
+.container .sec-5 .card-container .card .card-footer .hydrated, .container .sec-5 .card-container .card .hydrated{
+    color: hsl(9, 100%, 62%);
+}
+
+.container .sec-5 .card-container .card p span{
+    margin-right: 50px;
+}
+
+.container .sec-5 .card-container .card .card-footer{
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.read-more{
+    color: hsl(9, 100%, 62%);
+    font-size: 20px;
+}
+
+.hidden-logo{
+    display: none;
+}
+
+@media screen and (max-width:1200px){
+    
+    nav .nav-items{
+        position: absolute;
+        left: 0;
+        top: 0px;
+        transform: translateX(-100%);
+        transition: all .5s;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: white;
+        height: 600px;
+        width: 35% !important;
+    }
+
+    nav .nav-items.active{
+        transform: translateX(0);
+    }
+
+    nav .nav-items .items{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    nav .nav-items .items li, .hidden-logo{
+        padding: 20px;
+    }
+
+    
+    nav .toggle{
+        display: block;
+        position: absolute;
+        padding: 5px 15px;
+        right: 50px;
+        box-shadow: 0 5px 20px 0 hsla(219, 56%, 21%, 0.1);
+    }
+    .container header nav .icons{
+        margin-right: 60px;
+        width: 20%;
+    } 
+
+    .hidden-logo{
+        display: block;
+        width: 100%;
+    }
+    
+    .sec-4{
+        height: fit-content;
+    }
+
+    .sec-4 .card-container .card{
+        width: 40% !important;
+        
+    }
+}
+
+
+@media screen and (max-width: 866px) {
+
+    .container .hero{
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+    }
+    .container .hero .right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .container .hero .left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+    .container .hero .left h1{
+        font-size: 40px;
+    }
+    .top-bar .left{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .hidden-logo img{
+        width: 100% !important;
+        height: 30px !important;
+    }
+    nav .nav-items .items li{
+        font-size: 15px;
+    }
+    .logo{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .top-bar .icons{
+        display: none;
+    }
+    nav .icons{
+        display: none !important;
+
+    }
+}
+
+@media screen and (max-width: 550px){
+    nav .nav-items{
+        width: 50% !important;
+    }
+    .sec-4 .card-container .card{
+        width: 90% !important;
+    }
+    .sec-5 .card-container{
+        flex-direction: column;
+    }
+    .sec-5 .card-container .card{
+        width: 90% !important;
+        margin-bottom: 30px;
+    }
+
+    .top-bar .left{
+        display: none;
+    }
+    .top-bar {
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }   
+    .top-bar .right{
+        padding: 0;
+        justify-content: center;
+        width: 100% !important;
+    }
+}
+
